@@ -600,9 +600,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  12.0
-    #define DEFAULT_Ki   0.84
-    #define DEFAULT_Kd 85.00
+    #define DEFAULT_Kp  21.32
+    #define DEFAULT_Ki   1.85
+    #define DEFAULT_Kd 61.67
   #endif
 #endif // PIDTEMP
 
@@ -640,9 +640,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
    // Felix Foil Heater
-  #define DEFAULT_bedKp 103.37
-  #define DEFAULT_bedKi 2.79
-  #define DEFAULT_bedKd 956.94
+  #define DEFAULT_bedKp 57.76
+  #define DEFAULT_bedKi 2.06
+  #define DEFAULT_bedKd 1081.97
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1167,7 +1167,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -17, 29, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -17, 29, -2.24 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1357,7 +1357,7 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 250
+#define X_BED_SIZE 240
 #define Y_BED_SIZE 205
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
@@ -1366,7 +1366,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 235
+#define Z_MAX_POS 220
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1844,8 +1844,8 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 180
-#define PREHEAT_1_TEMP_BED     70
+#define PREHEAT_1_TEMP_HOTEND 205
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
@@ -2247,7 +2247,7 @@
 //
 // Generic 16x2, 16x4, 20x2, or 20x4 character-based LCD.
 //
-#define ULTRA_LCD
+//#define ULTRA_LCD
 
 //=============================================================================
 //======================== LCD / Controller Selection =========================
